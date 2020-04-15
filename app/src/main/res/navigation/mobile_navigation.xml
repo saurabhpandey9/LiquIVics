@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/addBottleFragment">
+
+    <fragment
+        android:id="@+id/addBottleFragment"
+        android:name="com.developerdesk9.liquivics.AddBottleFragment"
+        android:label="Add Drip"
+        tools:layout="@layout/fragment_add_bottle">
+        <action
+            android:id="@+id/action_addBottleFragment_to_statusFragment"
+            app:destination="@id/statusFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/statusFragment"
+        android:name="com.developerdesk9.liquivics.StatusFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_status" />
+    <fragment
+        android:id="@+id/patientsFragment"
+        android:name="com.developerdesk9.liquivics.PatientsFragment"
+        android:label="Patient Details"
+        tools:layout="@layout/fragment_patients" />
+    <!--    <fragment-->
+    <!--        android:id="@+id/devicesInUse"-->
+    <!--        android:name="com.example.bottle_monitor.DevicesInUse"-->
+    <!--        android:label="fragment_devices_in_use"-->
+    <!--        tools:layout="@layout/fragment_devices_in_use" />-->
+
+</navigation>
